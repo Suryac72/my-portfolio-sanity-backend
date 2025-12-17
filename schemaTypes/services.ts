@@ -1,8 +1,8 @@
 import { defineType, defineField } from 'sanity';
 
 export default defineType({
-  name: 'about',
-  title: 'About',
+  name: 'services',
+  title: 'Services',
   type: 'document',
   fields: [
     defineField({
@@ -16,36 +16,26 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'innerSubTitle',
-      title: 'Inner Subtitle',
-      type: 'string',
-    }),
-    defineField({
       name: 'description',
       title: 'Description',
       type: 'text',
     }),
     defineField({
-      name: 'aboutImage',
-      title: 'About Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'details',
+      title: 'Details',
+      type: 'text',
     }),
     defineField({
-      name: 'stats',
-      title: 'Stats',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            { name: 'label', title: 'Label', type: 'string' },
-            { name: 'value', title: 'Value', type: 'string' },
-          ],
-        },
-      ],
+      name: 'icon',
+      title: 'Icon',
+      type: 'image',
+      options: { hotspot: true },
+    }),
+    defineField({
+      name: 'color',
+      title: 'Color (tailwind gradient)',
+      type: 'string',
+      description: 'e.g. "from-blue-400 to-blue-600"',
     }),
   ],
 
@@ -53,7 +43,7 @@ export default defineType({
     select: {
       title: 'title',
       subtitle: 'subtitle',
-      media: 'aboutImage',
+      media: 'icon',
     },
   },
 });

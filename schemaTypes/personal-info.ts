@@ -30,6 +30,73 @@ export default defineType({
       title: 'Contact Us Title',
       type: 'string',
     }),
+    // Additional contact & personal fields used by the frontend
+    defineField({
+      name: 'email',
+      title: 'Email',
+      type: 'string',
+    }),
+    defineField({
+      name: 'phone',
+      title: 'Phone',
+      type: 'string',
+    }),
+    defineField({
+      name: 'location',
+      title: 'Location',
+      type: 'string',
+    }),
+    defineField({
+      name: 'address',
+      title: 'Address',
+      type: 'string',
+    }),
+    defineField({
+      name: 'linkedin',
+      title: 'LinkedIn URL',
+      type: 'url',
+    }),
+    defineField({
+      name: 'github',
+      title: 'GitHub URL',
+      type: 'url',
+    }),
+    defineField({
+      name: 'age',
+      title: 'Age',
+      type: 'string',
+    }),
+    defineField({
+      name: 'residence',
+      title: 'Residence',
+      type: 'string',
+    }),
+    defineField({
+      name: 'freelance',
+      title: 'Freelance',
+      type: 'string',
+    }),
+    // Languages list used in frontend Skills component
+    defineField({
+      name: 'languages',
+      title: 'Languages',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'name', title: 'Name', type: 'string' },
+            { name: 'level', title: 'Level (0-100)', type: 'number' },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: 'extraSkills',
+      title: 'Extra Skills',
+      type: 'array',
+      of: [{ type: 'string' }],
+    }),
   ],
 
   preview: {

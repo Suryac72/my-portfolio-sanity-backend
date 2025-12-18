@@ -8,6 +8,7 @@ import cv from './cv'
 import skills from './skills'
 import works from './works'
 import services from './services'
+import profile from './profile'
 
 export const schemaTypes = [
   about,
@@ -19,5 +20,6 @@ export const schemaTypes = [
   works,
   cv,
   header,
-  personalInfo
+  personalInfo,
+  profile
 ]
